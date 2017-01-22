@@ -1,4 +1,4 @@
-# The code in this repository reads in the data from the UCI study on fitness trackers. 
+# The code in this repository reads in the data from the UCI study on fitness trackers, combines the various files, and creates a much more user-friendly "tidy" dataset. 
 * After loading the required package, the user sets the working directory, which is the location where the data was unzipped.
 * Using **read.table**, we read in the training and test data for the study, and store them into appropriately named variables. The X values are the metrics from the trackers, the Y values are activity identifiers, and the subject values are identifiers for the participants. The *features* variable is a file of names for the metrics --- they describe the movement measured by the tracker. The *labels* variable is a label of activities, including sitting, standing, laying.
 * Using **rbind**, we combine the training and test data --- first for X, then for Y, and finally for the subject. This results in three *combined_* variables: one for each data group.
